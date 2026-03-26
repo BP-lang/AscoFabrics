@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Asco Fabrics — Men's Unstitched Fabric. Export Grade.</title>
+<meta name="description" content="Premium unstitched fabric for Pakistani men. Wash & wear, cotton, blended. Manufacturer direct.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,600;0,700;1,600&family=Barlow:wght@400;500;600;700;800;900&family=Barlow+Condensed:wght@700;800;900&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#F5F3EF;--dark:#1E1E1E;--text:#1A1A1A;--gold:#C8A96E;--muted:#7A7A7A;--card:#EDEBE6;--border:#D9D6CF}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--text);font-family:'Barlow',sans-serif;font-size:16px;line-height:1.75;overflow-x:hidden}
+.label{font-size:11px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--gold)}
+.reveal{opacity:0;transform:translateY(36px);transition:opacity .75s ease,transform .75s ease}
+.reveal.visible{opacity:1;transform:none}
+.d1{transition-delay:.12s}.d2{transition-delay:.24s}.d3{transition-delay:.36s}
+
+nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:center;justify-content:space-between;padding:0 64px;height:72px;background:var(--bg);border-bottom:1px solid var(--border);transition:box-shadow .3s}
+nav.scrolled{box-shadow:0 2px 24px rgba(0,0,0,.07)}
+.nav-logo{font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:22px;letter-spacing:.1em;color:var(--text);text-decoration:none}
+.nav-logo span{color:var(--gold)}
+.nav-links{display:flex;align-items:center;gap:36px;list-style:none}
+.nav-links a{font-size:12px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--text);text-decoration:none;transition:color .2s}
+.nav-links a:hover{color:var(--gold)}
+.nav-cta{background:var(--gold)!important;color:var(--text)!important;padding:10px 22px}
+.nav-cta:hover{background:#b8965a!important}
+.hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;background:none;border:none;padding:4px}
+.hamburger span{display:block;width:24px;height:2px;background:var(--text)}
+.mob-menu{display:none;position:fixed;top:72px;left:0;right:0;background:var(--bg);border-bottom:1px solid var(--border);padding:24px 32px;z-index:99;flex-direction:column;gap:20px}
+.mob-menu.open{display:flex}
+.mob-menu a{font-size:15px;font-weight:700;letter-spacing:.05em;text-transform:uppercase;color:var(--text);text-decoration:none}
+.mob-cta{background:var(--gold);color:var(--text)!important;padding:14px 24px;text-align:center}
+
+#hero{display:grid;grid-template-columns:55% 45%;min-height:100vh;padding-top:72px}
+.hero-text{display:flex;flex-direction:column;justify-content:center;padding:80px 64px 80px 80px;position:relative}
+.hero-eyebrow{font-size:11px;font-weight:700;letter-spacing:.25em;text-transform:uppercase;color:var(--gold);margin-bottom:28px;display:flex;align-items:center;gap:12px}
+.hero-eyebrow::before{content:'';display:block;width:36px;height:1px;background:var(--gold)}
+.hero-headline{font-family:'Barlow Condensed',sans-serif;font-size:clamp(60px,7.5vw,108px);font-weight:900;line-height:.92;color:var(--text);margin-bottom:28px;text-transform:uppercase}
+.hero-sub{font-size:18px;color:var(--muted);line-height:1.65;max-width:420px;margin-bottom:48px}
+.hero-btns{display:flex;gap:16px;flex-wrap:wrap}
+.btn-p{background:var(--gold);color:var(--text);padding:16px 36px;font-size:12px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;text-decoration:none;display:inline-block;transition:background .2s,transform .2s}
+.btn-p:hover{background:#b8965a;transform:translateY(-2px)}
+.btn-o{border:2px solid var(--text);color:var(--text);padding:14px 32px;font-size:12px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;text-decoration:none;display:inline-flex;align-items:center;gap:8px;transition:background .2s,color .2s,transform .2s}
+.btn-o:hover{background:var(--text);color:var(--bg);transform:translateY(-2px)}
+.hero-scroll{position:absolute;bottom:40px;left:80px;font-size:10px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--muted);display:flex;align-items:center;gap:12px}
+.hero-scroll::after{content:'';display:block;width:60px;height:1px;background:var(--border)}
+.hero-img{position:relative;overflow:hidden;background:var(--dark)}
+.hero-img-in{position:absolute;inset:0;background:linear-gradient(160deg,#2C2010 0%,#1A1208 50%,#0A0805 100%);display:flex;align-items:center;justify-content:center}
+.hgrid{position:absolute;inset:0;background:repeating-linear-gradient(0deg,transparent,transparent 7px,rgba(200,169,110,.055) 7px,rgba(200,169,110,.055) 8px),repeating-linear-gradient(90deg,transparent,transparent 7px,rgba(200,169,110,.055) 7px,rgba(200,169,110,.055) 8px)}
+.hbig{font-family:'Barlow Condensed',sans-serif;font-size:clamp(80px,13vw,180px);font-weight:900;color:rgba(200,169,110,.1);line-height:1;text-transform:uppercase;user-select:none;position:relative;z-index:1;text-align:center;padding:20px}
+.hbadge{position:absolute;bottom:48px;left:48px;border:1px solid rgba(200,169,110,.4);padding:20px 28px;z-index:2}
+.hbadge-num{font-family:'Barlow Condensed',sans-serif;font-size:36px;font-weight:900;color:var(--gold);line-height:1}
+.hbadge-lbl{font-size:10px;font-weight:700;letter-spacing:.15em;text-transform:uppercase;color:rgba(200,169,110,.6);margin-top:4px}
+
+#truth{background:var(--dark);padding:0 80px}
+.truth-grid{display:grid;grid-template-columns:repeat(3,1fr)}
+.tc{padding:72px 48px;border-right:1px solid #242424}
+.tc:last-child{border-right:none}
+.tnum{font-family:'Barlow Condensed',sans-serif;font-size:48px;font-weight:900;color:#252525;line-height:1;margin-bottom:24px}
+.tc h3{font-family:'Barlow Condensed',sans-serif;font-size:26px;font-weight:800;color:white;line-height:1.1;margin-bottom:14px;text-transform:uppercase}
+.tc p{font-size:15px;color:#666;line-height:1.7}
+
+#collections{padding:120px 80px}
+.sec-hdr{display:flex;align-items:flex-end;justify-content:space-between;margin-bottom:64px}
+.sec-title{font-family:'Barlow Condensed',sans-serif;font-size:clamp(48px,5.5vw,80px);font-weight:900;line-height:.9;text-transform:uppercase}
+.sec-link{font-size:12px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--text);text-decoration:none;display:flex;align-items:center;gap:8px;border-bottom:2px solid var(--gold);padding-bottom:4px;transition:gap .2s}
+.sec-link:hover{gap:16px}
+.coll-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:20px}
+.ctile{position:relative;height:460px;overflow:hidden;cursor:pointer}
+.ctile-bg{position:absolute;inset:0;transition:transform .6s ease}
+.ctile:hover .ctile-bg{transform:scale(1.06)}
+.ww{background:linear-gradient(140deg,#2E2218,#1A1208)}
+.ct{background:linear-gradient(140deg,#1A2218,#0F1810)}
+.bl{background:linear-gradient(140deg,#221E12,#16140A)}
+.pr{background:linear-gradient(140deg,#28180A,#180E04)}
+.ctex{position:absolute;inset:0;opacity:.25}
+.ww .ctex{background:repeating-linear-gradient(0deg,transparent,transparent 5px,rgba(200,169,110,.35) 5px,rgba(200,169,110,.35) 6px)}
+.ct .ctex{background:repeating-linear-gradient(45deg,transparent,transparent 4px,rgba(160,200,160,.2) 4px,rgba(160,200,160,.2) 5px)}
+.bl .ctex{background:repeating-linear-gradient(-30deg,transparent,transparent 4px,rgba(200,200,160,.2) 4px,rgba(200,200,160,.2) 5px)}
+.pr .ctex{background:repeating-linear-gradient(30deg,transparent,transparent 2px,rgba(200,169,110,.4) 2px,rgba(200,169,110,.4) 3px),repeating-linear-gradient(-30deg,transparent,transparent 2px,rgba(200,169,110,.15) 2px,rgba(200,169,110,.15) 3px)}
+.ctile-con{position:absolute;inset:0;padding:40px;display:flex;flex-direction:column;justify-content:flex-end;background:linear-gradient(to top,rgba(0,0,0,.75) 0%,transparent 55%)}
+.tile-mood{font-size:10px;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:var(--gold);margin-bottom:10px}
+.tile-name{font-family:'Barlow Condensed',sans-serif;font-size:52px;font-weight:900;color:white;text-transform:uppercase;line-height:1}
+.tile-arr{position:absolute;top:36px;right:36px;width:44px;height:44px;border:1px solid rgba(255,255,255,.25);display:flex;align-items:center;justify-content:center;color:white;font-size:18px;transition:background .3s,border-color .3s,color .3s}
+.ctile:hover .tile-arr{background:var(--gold);border-color:var(--gold);color:var(--text)}
+
+#stats{background:var(--dark);padding:120px 80px;text-align:center}
+.stats-hl{font-family:'Barlow Condensed',sans-serif;font-size:clamp(44px,5.5vw,72px);font-weight:900;color:white;text-transform:uppercase;line-height:.95;margin-bottom:20px}
+.stats-sub{font-size:17px;color:#555;max-width:540px;margin:0 auto 72px;line-height:1.65}
+.stats-grid{display:grid;grid-template-columns:repeat(4,1fr);border:1px solid #252525}
+.sblock{padding:52px 24px;border-right:1px solid #252525;transition:background .3s}
+.sblock:last-child{border-right:none}
+.sblock:hover{background:rgba(200,169,110,.05)}
+.snum{font-family:'Barlow Condensed',sans-serif;font-size:60px;font-weight:900;color:var(--gold);line-height:1;margin-bottom:12px}
+.slbl{font-size:10px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:#404040}
+
+#products{padding:120px 0}
+.prod-hdr{padding:0 80px;margin-bottom:64px}
+.pblock{display:grid;grid-template-columns:60% 40%;border-top:1px solid var(--border)}
+.pblock.rev{grid-template-columns:40% 60%}
+.pblock.rev .pimg{order:2}.pblock.rev .pinfo{order:1}
+.pimg{position:relative;overflow:hidden;min-height:520px}
+.pimg-in{position:absolute;inset:0;transition:transform .6s ease}
+.pblock:hover .pimg-in{transform:scale(1.04)}
+.pww{background:linear-gradient(140deg,#2E2218,#1E1510)}
+.pct{background:linear-gradient(140deg,#1A2818,#101A10)}
+.ppr{background:linear-gradient(140deg,#2A1E08,#180E04)}
+.pp{position:absolute;inset:0;opacity:.28}
+.pww .pp{background:repeating-linear-gradient(0deg,transparent,transparent 6px,rgba(200,169,110,.3) 6px,rgba(200,169,110,.3) 7px),repeating-linear-gradient(90deg,transparent,transparent 24px,rgba(200,169,110,.1) 24px,rgba(200,169,110,.1) 25px)}
+.pct .pp{background:repeating-linear-gradient(45deg,transparent,transparent 5px,rgba(140,200,140,.25) 5px,rgba(140,200,140,.25) 6px)}
+.ppr .pp{background:repeating-linear-gradient(30deg,transparent,transparent 3px,rgba(200,169,110,.4) 3px,rgba(200,169,110,.4) 4px),repeating-linear-gradient(-30deg,transparent,transparent 3px,rgba(200,169,110,.15) 3px,rgba(200,169,110,.15) 4px)}
+.pinfo{padding:72px 60px;display:flex;flex-direction:column;justify-content:center}
+.ptag{font-size:10px;font-weight:700;letter-spacing:.25em;text-transform:uppercase;color:var(--gold);margin-bottom:16px}
+.pname{font-family:'Barlow Condensed',sans-serif;font-size:clamp(40px,4.5vw,60px);font-weight:900;color:var(--text);text-transform:uppercase;line-height:.95;margin-bottom:16px}
+.pmood{font-family:'Cormorant Garamond',serif;font-size:22px;font-style:italic;color:var(--muted);margin-bottom:28px}
+.pspec{font-size:12px;font-weight:600;letter-spacing:.08em;color:#999;margin-bottom:28px;padding:18px 0;border-top:1px solid var(--border);border-bottom:1px solid var(--border)}
+.pprice{font-family:'Barlow Condensed',sans-serif;font-size:36px;font-weight:900;color:var(--text);margin-bottom:32px}
+.pprice span{font-size:16px;font-weight:500;color:var(--muted)}
+.btn-wa{background:var(--text);color:var(--bg);padding:18px 32px;font-size:12px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;text-decoration:none;display:inline-flex;align-items:center;gap:10px;transition:background .2s,transform .2s;width:fit-content}
+.btn-wa:hover{background:var(--gold);color:var(--text);transform:translateY(-2px)}
+.wai{width:18px;height:18px;fill:currentColor;flex-shrink:0}
+
+#story{display:grid;grid-template-columns:50% 50%;border-top:1px solid var(--border);border-bottom:1px solid var(--border)}
+.story-txt{padding:100px 80px;display:flex;flex-direction:column;justify-content:center}
+.story-hl{font-family:'Barlow Condensed',sans-serif;font-size:clamp(36px,4vw,56px);font-weight:900;color:var(--text);text-transform:uppercase;line-height:.95;margin:16px 0 36px}
+.story-ps{display:flex;flex-direction:column;gap:20px}
+.story-ps p{font-size:17px;color:#555;line-height:1.8}
+.story-img{background:var(--dark);position:relative;overflow:hidden;display:flex;align-items:center;justify-content:center;min-height:500px}
+.svis{position:absolute;inset:0;background:linear-gradient(160deg,#2A1E08,#1A1205 50%,#0A0803)}
+.spat{position:absolute;inset:0;opacity:.18;background:repeating-linear-gradient(0deg,transparent,transparent 9px,rgba(200,169,110,.3) 9px,rgba(200,169,110,.3) 10px),repeating-linear-gradient(90deg,transparent,transparent 9px,rgba(200,169,110,.3) 9px,rgba(200,169,110,.3) 10px);background-size:18px 18px}
+.scen{position:relative;z-index:2;text-align:center}
+.sbig{font-family:'Barlow Condensed',sans-serif;font-size:clamp(60px,9vw,130px);font-weight:900;color:rgba(200,169,110,.1);line-height:1;text-transform:uppercase;user-select:none}
+.sring{margin:24px auto 0;width:160px;height:160px;border:1px solid rgba(200,169,110,.35);border-radius:50%;display:flex;align-items:center;justify-content:center;flex-direction:column}
+.ring-n{font-family:'Barlow Condensed',sans-serif;font-size:44px;font-weight:900;color:var(--gold);line-height:1}
+.ring-l{font-size:10px;font-weight:700;letter-spacing:.15em;text-transform:uppercase;color:rgba(200,169,110,.6);margin-top:4px;line-height:1.4;text-align:center}
+
+#proof{background:var(--card);padding:120px 80px}
+.proof-grid{display:grid;grid-template-columns:60% 40%;gap:80px;align-items:center}
+.pq{padding-left:28px;border-left:3px solid var(--gold)}
+.pmark{font-family:'Cormorant Garamond',serif;font-size:100px;line-height:.7;color:var(--gold);opacity:.3;display:block;margin-bottom:8px}
+.ptxt{font-family:'Cormorant Garamond',serif;font-size:clamp(22px,2.5vw,32px);font-style:italic;font-weight:600;color:var(--text);line-height:1.4;margin-bottom:24px}
+.pattr{font-size:11px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--muted)}
+.pstat{text-align:center}
+.pnum{font-family:'Barlow Condensed',sans-serif;font-size:100px;font-weight:900;color:var(--gold);line-height:1;margin-bottom:4px}
+.plbl{font-family:'Barlow Condensed',sans-serif;font-size:22px;font-weight:700;color:var(--text);text-transform:uppercase;letter-spacing:.04em;margin-bottom:28px}
+.pcities{display:flex;flex-wrap:wrap;justify-content:center;gap:8px}
+.city{font-size:11px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);padding:6px 12px;border:1px solid var(--border);background:var(--bg)}
+
+#retailers{padding:120px 80px;border-top:1px solid var(--border)}
+.ret-cards{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-bottom:48px}
+.rcard{padding:36px;background:var(--card);border-top:3px solid var(--gold)}
+.rcard-t{font-family:'Barlow Condensed',sans-serif;font-size:32px;font-weight:900;color:var(--gold);margin-bottom:10px}
+.rcard p{font-size:14px;color:var(--muted);line-height:1.6}
+
+#cta{background:var(--dark);padding:140px 80px;text-align:center;position:relative;overflow:hidden}
+.cta-bg{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);font-family:'Barlow Condensed',sans-serif;font-size:22vw;font-weight:900;color:rgba(255,255,255,.02);white-space:nowrap;user-select:none;pointer-events:none;text-transform:uppercase}
+.cta-hl{font-family:'Barlow Condensed',sans-serif;font-size:clamp(52px,8vw,100px);font-weight:900;color:white;text-transform:uppercase;line-height:.92;margin-bottom:24px;position:relative}
+.cta-sub{font-size:19px;color:#555;margin-bottom:56px;font-style:italic;font-family:'Cormorant Garamond',serif;position:relative}
+.cta-btns{display:flex;align-items:center;justify-content:center;gap:20px;flex-wrap:wrap;position:relative}
+.btn-gh{border:1px solid rgba(255,255,255,.2);color:white;padding:16px 36px;font-size:12px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;text-decoration:none;transition:border-color .2s,color .2s}
+.btn-gh:hover{border-color:var(--gold);color:var(--gold)}
+.btn-tl{color:#444;font-size:12px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;text-decoration:none;border-bottom:1px solid #444;padding-bottom:2px;transition:color .2s,border-color .2s}
+.btn-tl:hover{color:var(--gold);border-color:var(--gold)}
+
+footer{background:#111;padding:80px 80px 40px;color:#555}
+.ft-top{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:56px;margin-bottom:60px}
+.ft-brand{font-family:'Barlow Condensed',sans-serif;font-size:26px;font-weight:900;color:white;letter-spacing:.08em;margin-bottom:10px}
+.ft-brand span{color:var(--gold)}
+.ft-tag{font-size:13px;color:#444;margin-bottom:24px;line-height:1.6}
+.ft-soc{display:flex;gap:14px}
+.soca{width:36px;height:36px;border:1px solid #252525;display:flex;align-items:center;justify-content:center;color:#555;text-decoration:none;transition:border-color .2s,color .2s}
+.soca:hover{border-color:var(--gold);color:var(--gold)}
+.ftitle{font-size:11px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:white;margin-bottom:18px}
+.flist{list-style:none;display:flex;flex-direction:column;gap:10px}
+.flist a{font-size:14px;color:#444;text-decoration:none;transition:color .2s}
+.flist a:hover{color:var(--gold)}
+.fci{font-size:14px;color:#444;margin-bottom:10px;line-height:1.6}
+.fdiv{height:1px;background:#1E1E1E;margin-bottom:28px}
+.fbot{display:flex;justify-content:space-between;align-items:center}
+.fbot p{font-size:12px;color:#333}
+
+/* INSTAGRAM */
+#instagram{padding:120px 80px;background:var(--dark);text-align:center}
+.ig-hdr{margin-bottom:56px}
+.ig-title{font-family:'Barlow Condensed',sans-serif;font-size:clamp(44px,5.5vw,72px);font-weight:900;color:white;text-transform:uppercase;line-height:.92;margin:12px 0 16px}
+.ig-sub{font-size:16px;color:#555;margin-bottom:32px}
+.ig-handle{display:inline-flex;align-items:center;gap:8px;font-size:13px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--gold);text-decoration:none;border-bottom:1px solid rgba(200,169,110,.3);padding-bottom:4px;transition:border-color .2s}
+.ig-handle:hover{border-color:var(--gold)}
+.ig-handle svg{width:16px;height:16px;fill:currentColor}
+.ig-feed-wrap{max-width:1100px;margin:0 auto}
+behold-widget{--behold-background:transparent}
+.ig-placeholder{display:grid;grid-template-columns:repeat(6,1fr);gap:4px;max-width:1100px;margin:0 auto}
+.ig-ph-tile{aspect-ratio:1;background:#252525;position:relative;overflow:hidden}
+.ig-ph-tile::after{content:'';position:absolute;inset:0;background:linear-gradient(135deg,#2A2A2A 0%,#1E1E1E 100%)}
+.ig-footer-cta{margin-top:40px}
+.ig-footer-cta a{font-size:12px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:#555;text-decoration:none;border-bottom:1px solid #333;padding-bottom:3px;transition:color .2s,border-color .2s}
+.ig-footer-cta a:hover{color:var(--gold);border-color:var(--gold)}
+@media(max-width:1024px){#instagram{padding:80px 48px}}
+@media(max-width:640px){#instagram{padding:60px 24px}}
+
+.wa-float{position:fixed;bottom:28px;right:28px;z-index:999;display:flex;flex-direction:column;align-items:flex-end;gap:8px}
+.wa-tip{background:var(--dark);color:white;font-size:12px;font-weight:600;letter-spacing:.05em;padding:8px 14px;opacity:0;transform:translateX(10px);transition:opacity .2s,transform .2s;pointer-events:none;white-space:nowrap}
+.wa-float:hover .wa-tip{opacity:1;transform:none}
+.wa-btn{width:60px;height:60px;background:#25D366;border-radius:50%;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 20px rgba(37,211,102,.45);text-decoration:none;animation:wap 3s ease-in-out infinite;transition:transform .2s,box-shadow .2s}
+.wa-btn:hover{transform:scale(1.1);animation:none;box-shadow:0 6px 28px rgba(37,211,102,.6)}
+.wa-btn svg{width:28px;height:28px;fill:white}
+@keyframes wap{0%,100%{box-shadow:0 4px 20px rgba(37,211,102,.4)}50%{box-shadow:0 4px 32px rgba(37,211,102,.7)}}
+
+@media(max-width:1024px){
+nav{padding:0 32px}.nav-links{display:none}.hamburger{display:flex}
+#hero{grid-template-columns:1fr;min-height:auto}.hero-text{padding:80px 48px 60px}.hero-img{display:none}.hero-scroll{left:48px}
+#truth{padding:0 48px}.truth-grid{grid-template-columns:1fr}.tc{border-right:none;border-bottom:1px solid #222;padding:52px 0}.tc:last-child{border-bottom:none}
+#collections{padding:80px 48px}.coll-grid{grid-template-columns:1fr}.ctile{height:340px}.sec-hdr{flex-direction:column;align-items:flex-start;gap:20px}
+#stats{padding:80px 48px}.stats-grid{grid-template-columns:1fr 1fr}.sblock:nth-child(2){border-right:none}
+#products{padding:80px 0}.prod-hdr{padding:0 48px}.pblock,.pblock.rev{grid-template-columns:1fr}.pblock.rev .pimg,.pblock.rev .pinfo{order:0}.pimg{min-height:300px}.pinfo{padding:52px 48px}
+#story{grid-template-columns:1fr}.story-txt{padding:80px 48px}.story-img{min-height:320px}
+#proof{padding:80px 48px}.proof-grid{grid-template-columns:1fr;gap:48px}
+#retailers{padding:80px 48px}.ret-cards{grid-template-columns:1fr}
+#cta{padding:100px 48px}
+footer{padding:60px 48px 32px}.ft-top{grid-template-columns:1fr 1fr;gap:36px}.fbot{flex-direction:column;gap:10px;text-align:center}
+}
+@media(max-width:640px){
+.hero-text{padding:60px 24px 48px}.hero-scroll{left:24px}
+#truth{padding:0 24px}
+#collections{padding:60px 24px}.ctile{height:300px}
+#stats{padding:60px 24px}
+.prod-hdr{padding:0 24px}.pinfo{padding:40px 24px}
+.story-txt{padding:60px 24px}
+#proof{padding:60px 24px}
+#retailers{padding:60px 24px}
+#cta{padding:80px 24px}.cta-btns{flex-direction:column;align-items:center}
+footer{padding:48px 24px 24px}.ft-top{grid-template-columns:1fr}
+nav{padding:0 20px}
+.wa-btn{width:52px;height:52px}.wa-float{bottom:20px;right:20px}
+}
+</style>
+</head>
+<body>
+
+<nav id="nav">
+  <a href="#" class="nav-logo">ASCO<span>®</span> FABRICS</a>
+  <ul class="nav-links">
+    <li><a href="#collections">Collections</a></li>
+    <li><a href="#story">About</a></li>
+    <li><a href="#retailers">For Retailers</a></li>
+    <li><a href="#contact">Contact</a></li>
+    <li><a href="https://wa.me/923232309105?text=Hi+Asco+Fabrics,+I'd+like+to+explore+your+collections." class="nav-cta" target="_blank">WhatsApp Us</a></li>
+  </ul>
+  <button class="hamburger" id="ham" aria-label="Menu"><span></span><span></span><span></span></button>
+</nav>
+<div class="mob-menu" id="mob">
+  <a href="#collections" onclick="cm()">Collections</a>
+  <a href="#story" onclick="cm()">About</a>
+  <a href="#retailers" onclick="cm()">For Retailers</a>
+  <a href="#contact" onclick="cm()">Contact</a>
+  <a href="https://wa.me/923232309105?text=Hi+Asco+Fabrics,+I'd+like+to+explore+your+collections." class="mob-cta" target="_blank">WhatsApp Us →</a>
+</div>
+
+<section id="hero">
+  <div class="hero-text">
+    <div class="hero-eyebrow reveal">Unstitched Fabric · Pakistan</div>
+    <h1 class="hero-headline reveal d1">The<br>Fabric<br>Speaks<br>Before<br>You Do.</h1>
+    <p class="hero-sub reveal d2">Unstitched men's fabric. Export grade. Built for how Pakistanis actually live.</p>
+    <div class="hero-btns reveal d3">
+      <a href="#collections" class="btn-p">Explore Collections</a>
+      <a href="https://wa.me/923232309105?text=Hi+Asco+Fabrics,+I'd+like+to+explore+your+collections." class="btn-o" target="_blank">
+        <svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+        WhatsApp Us
+      </a>
+    </div>
+    <div class="hero-scroll">Scroll</div>
+  </div>
+  <div class="hero-img">
+    <div class="hero-img-in">
+      <div class="hgrid"></div>
+      <div class="hbig">FABRIC<br>MADE</div>
+      <div class="hbadge"><div class="hbadge-num">25+</div><div class="hbadge-lbl">Years of Making</div></div>
+    </div>
+  </div>
+</section>
+
+<section id="truth">
+  <div class="truth-grid">
+    <div class="tc reveal"><div class="tnum">01</div><h3>Average Fabric Shows.</h3><p>In the creases by noon. In the shape after two washes. In the way you feel wearing it all day.</p></div>
+    <div class="tc reveal d1"><div class="tnum">02</div><h3>Your Tailor Works With What You Give Him.</h3><p>Better raw material means a better result. It's not complicated. It's just been overlooked.</p></div>
+    <div class="tc reveal d2"><div class="tnum">03</div><h3>Most Men Settle. You Don't Have To.</h3><p>There's a reason some men always look put together. This is part of it.</p></div>
+  </div>
+</section>
+
+<section id="collections">
+  <div class="sec-hdr">
+    <h2 class="sec-title reveal">The<br>Collections.</h2>
+    <a href="#" class="sec-link reveal">View All →</a>
+  </div>
+  <div class="coll-grid">
+    <div class="ctile reveal"><div class="ctile-bg ww"><div class="ctex"></div></div><div class="ctile-con"><div class="tile-mood">Sharp All Day. Every Day.</div><div class="tile-name">Wash &amp; Wear</div></div><div class="tile-arr">→</div></div>
+    <div class="ctile reveal d1"><div class="ctile-bg ct"><div class="ctex"></div></div><div class="ctile-con"><div class="tile-mood">Breathes. So You Don't Have To.</div><div class="tile-name">Cotton</div></div><div class="tile-arr">→</div></div>
+    <div class="ctile reveal d2"><div class="ctile-bg bl"><div class="ctex"></div></div><div class="ctile-con"><div class="tile-mood">The Best Of Both. Engineered.</div><div class="tile-name">Blended</div></div><div class="tile-arr">→</div></div>
+    <div class="ctile reveal d3"><div class="ctile-bg pr"><div class="ctex"></div></div><div class="ctile-con"><div class="tile-mood">For The Moments That Matter.</div><div class="tile-name">Premium</div></div><div class="tile-arr">→</div></div>
+  </div>
+</section>
+
+<section id="stats">
+  <h2 class="stats-hl reveal">We Don't Source<br>Quality. We Make It.</h2>
+  <p class="stats-sub reveal">Asco Fabrics is the local face of ASCO Group — export-grade manufacturing standards, now available to Pakistani men directly.</p>
+  <div class="stats-grid">
+    <div class="sblock reveal"><div class="snum">25+</div><div class="slbl">Years Manufacturing</div></div>
+    <div class="sblock reveal d1"><div class="snum">Export</div><div class="slbl">Grade Quality</div></div>
+    <div class="sblock reveal d2"><div class="snum">Yarn→</div><div class="slbl">Vertical Production</div></div>
+    <div class="sblock reveal d3"><div class="snum">500+</div><div class="slbl">Retailers Nationwide</div></div>
+  </div>
+</section>
+
+<section id="products">
+  <div class="prod-hdr"><h2 class="sec-title reveal">Featured<br>Fabrics.</h2></div>
+  <div class="pblock">
+    <div class="pimg"><div class="pimg-in pww"><div class="pp"></div></div></div>
+    <div class="pinfo reveal">
+      <div class="ptag">Wash &amp; Wear Collection</div>
+      <h3 class="pname">Classic<br>Crisp</h3>
+      <p class="pmood">"Sharp. Light. Lasting."</p>
+      <div class="pspec">65% Polyester 35% Viscose · 115 GSM · 58 inches · Summer Formal</div>
+      <div class="pprice">PKR 280 <span>/ meter</span></div>
+      <a href="https://wa.me/923232309105?text=Hi,+I'm+interested+in+Classic+Crisp+(Wash+%26+Wear).+Is+it+available?" class="btn-wa" target="_blank">
+        <svg class="wai" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+        Order on WhatsApp
+      </a>
+    </div>
+  </div>
+  <div class="pblock rev">
+    <div class="pinfo reveal">
+      <div class="ptag">Cotton Collection</div>
+      <h3 class="pname">Everyday<br>Breathe</h3>
+      <p class="pmood">"Cool. Soft. Effortless."</p>
+      <div class="pspec">100% Combed Cotton · 120 GSM · 58 inches · Year-round</div>
+      <div class="pprice">PKR 310 <span>/ meter</span></div>
+      <a href="https://wa.me/923232309105?text=Hi,+I'm+interested+in+Everyday+Breathe+(Cotton).+Is+it+available?" class="btn-wa" target="_blank">
+        <svg class="wai" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+        Order on WhatsApp
+      </a>
+    </div>
+    <div class="pimg"><div class="pimg-in pct"><div class="pp"></div></div></div>
+  </div>
+  <div class="pblock">
+    <div class="pimg"><div class="pimg-in ppr"><div class="pp"></div></div></div>
+    <div class="pinfo reveal">
+      <div class="ptag">Premium Collection</div>
+      <h3 class="pname">The<br>Statement</h3>
+      <p class="pmood">"Refined. Rich. Remembered."</p>
+      <div class="pspec">Premium Blended · 130 GSM · 58 inches · Formal &amp; Semi-formal</div>
+      <div class="pprice">PKR 450 <span>/ meter</span></div>
+      <a href="https://wa.me/923232309105?text=Hi,+I'm+interested+in+The+Statement+(Premium).+Is+it+available?" class="btn-wa" target="_blank">
+        <svg class="wai" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+        Order on WhatsApp
+      </a>
+    </div>
+  </div>
+</section>
+
+<section id="story">
+  <div class="story-txt">
+    <div class="label reveal">Our Story</div>
+    <h2 class="story-hl reveal">We Don't Buy From Manufacturers.<br>We Are One.</h2>
+    <div class="story-ps reveal">
+      <p>Asco has been making fabric for over two decades — not trading it.</p>
+      <p>Our looms, our dyes, our finishing — all in-house. Quality doesn't vary batch to batch. It can't.</p>
+      <p>For years, we exported. The local market got whatever was left. That changes now.</p>
+      <p>Export-grade fabric. Cut for Pakistan. Priced for Pakistan.</p>
+    </div>
+  </div>
+  <div class="story-img">
+    <div class="svis"></div><div class="spat"></div>
+    <div class="scen">
+      <div class="sbig">ASCO<br>MADE</div>
+      <div class="sring"><div class="ring-n">25+</div><div class="ring-l">Years of<br>Making</div></div>
+    </div>
+  </div>
+</section>
+
+<section id="proof">
+  <div class="proof-grid">
+    <div class="pq reveal">
+      <span class="pmark">"</span>
+      <p class="ptxt">The consistency is what keeps us coming back. You know exactly what you're getting every time.</p>
+      <div class="pattr">— Retailer, Karachi</div>
+    </div>
+    <div class="pstat reveal">
+      <div class="pnum">30+</div>
+      <div class="plbl">Cities in Pakistan</div>
+      <div class="pcities">
+        <span class="city">Karachi</span><span class="city">Lahore</span><span class="city">Islamabad</span>
+        <span class="city">Faisalabad</span><span class="city">Multan</span><span class="city">Peshawar</span>
+        <span class="city">Quetta</span><span class="city">Hyderabad</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="instagram">
+  <div class="ig-hdr reveal">
+    <div class="label">On Instagram</div>
+    <h2 class="ig-title">Seen in the Wild.</h2>
+    <p class="ig-sub">Fabric on the bolt. Fabric on the man. Follow along.</p>
+    <a href="https://instagram.com/ascofabrics" class="ig-handle" target="_blank">
+      <svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+      @ascofabrics
+    </a>
+  </div>
+  <!-- BEHOLD WIDGET — replace YOUR_WIDGET_ID with the ID from behold.so -->
+  <div class="ig-feed-wrap reveal">
+    <behold-widget feed-id="YOUR_WIDGET_ID"></behold-widget>
+    <script src="https://w.behold.so/widget.js" type="module"></script>
+  </div>
+  <div class="ig-footer-cta reveal">
+    <a href="https://instagram.com/ascofabrics" target="_blank">View all posts on Instagram →</a>
+  </div>
+</section>
+
+<section id="retailers">
+  <div class="label reveal">B2B</div>
+  <h2 class="sec-title reveal" style="margin:16px 0 24px;max-width:600px">For<br>Retailers.</h2>
+  <p class="reveal" style="font-size:18px;color:var(--muted);max-width:540px;margin-bottom:48px;line-height:1.7">Stock fabric your customers will come back for. Consistent quality, reliable supply, competitive terms.</p>
+  <div class="ret-cards">
+    <div class="rcard reveal"><div class="rcard-t">MOQ</div><p>Flexible minimum order quantities for new and established retailers across Pakistan.</p></div>
+    <div class="rcard reveal d1"><div class="rcard-t">Supply</div><p>Consistent batch quality — same color, same weight, same feel. Every single time.</p></div>
+    <div class="rcard reveal d2"><div class="rcard-t">Support</div><p>Direct WhatsApp access to our team. Fast responses. No middlemen. No delays.</p></div>
+  </div>
+  <a href="https://wa.me/923232309105?text=Hi,+I'm+a+retailer+and+I'd+like+to+discuss+stocking+Asco+Fabrics." class="btn-p reveal" target="_blank">Apply as a Retailer →</a>
+</section>
+
+<section id="cta">
+  <div class="cta-bg">ASCO</div>
+  <h2 class="cta-hl reveal">Ready to<br>Dress Better?</h2>
+  <p class="cta-sub reveal">The fabric is ready. Your tailor is waiting.</p>
+  <div class="cta-btns reveal">
+    <a href="#collections" class="btn-p">Browse Collections</a>
+    <a href="https://wa.me/923232309105?text=Hi+Asco+Fabrics,+I'm+ready+to+order." class="btn-gh" target="_blank">WhatsApp Us</a>
+    <a href="#retailers" class="btn-tl">For Retailers</a>
+  </div>
+</section>
+
+<footer id="contact">
+  <div class="ft-top">
+    <div>
+      <div class="ft-brand">ASCO<span>®</span> FABRICS</div>
+      <p class="ft-tag">Export Quality. Local Pride.<br>A division of ASCO Group.</p>
+      <div class="ft-soc">
+        <a href="https://instagram.com/ascofabrics" class="soca" aria-label="Instagram" target="_blank"><svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg></a>
+        <a href="https://wa.me/923232309105" class="soca" target="_blank" aria-label="WhatsApp"><svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg></a>
+      </div>
+    </div>
+    <div><div class="ftitle">Collections</div><ul class="flist"><li><a href="#collections">Wash &amp; Wear</a></li><li><a href="#collections">Cotton</a></li><li><a href="#collections">Blended</a></li><li><a href="#collections">Premium</a></li></ul></div>
+    <div><div class="ftitle">Company</div><ul class="flist"><li><a href="#story">About Us</a></li><li><a href="#retailers">For Retailers</a></li><li><a href="#proof">Find a Store</a></li><li><a href="#contact">Contact</a></li></ul></div>
+    <div>
+      <div class="ftitle">Contact</div>
+      <div class="fci">📱 +92 323 230 9105</div>
+      <div class="fci">✉️ info@ascofabrics.com</div>
+      <div class="fci">📍 Karachi, Pakistan</div>
+      <a href="https://wa.me/923232309105" style="font-size:13px;color:var(--gold);text-decoration:none;font-weight:700;display:inline-block;margin-top:12px" target="_blank">→ Chat on WhatsApp</a>
+    </div>
+  </div>
+  <div class="fdiv"></div>
+  <div class="fbot"><p>© 2025 ASCO Group. All rights reserved.</p><p>Designed for Pakistan.</p></div>
+</footer>
+
+<div class="wa-float">
+  <div class="wa-tip">Chat with us</div>
+  <a href="https://wa.me/923232309105?text=Hi+Asco+Fabrics,+I'd+like+to+explore+your+collections." class="wa-btn" target="_blank" aria-label="WhatsApp">
+    <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+  </a>
+</div>
+
+<script>
+const nav=document.getElementById('nav');
+window.addEventListener('scroll',()=>nav.classList.toggle('scrolled',scrollY>20));
+const ham=document.getElementById('ham'),mob=document.getElementById('mob');
+ham.addEventListener('click',()=>mob.classList.toggle('open'));
+function cm(){mob.classList.remove('open')}
+const obs=new IntersectionObserver(e=>{e.forEach(x=>{if(x.isIntersecting){x.target.classList.add('visible');obs.unobserve(x.target)}})},{threshold:.1,rootMargin:'0px 0px -40px 0px'});
+document.querySelectorAll('.reveal').forEach(el=>obs.observe(el));
+window.addEventListener('load',()=>{document.querySelectorAll('#hero .reveal').forEach((el,i)=>setTimeout(()=>el.classList.add('visible'),i*150))});
+</script>
+</body>
+</html>
